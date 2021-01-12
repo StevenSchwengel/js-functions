@@ -18,10 +18,26 @@
   // ---------------------
 
 
+   function maxOfThree(a, b, c)
+     {
+     var max = Math.max(a, b, c);
+     }
+
 
   // ---------------------
   // Define a function isVowel() that takes a character (i.e. a string of length 1) and returns true if it is a vowel, false otherwise.
   // ---------------------
+
+
+    function isVowel(letter)
+     {
+         if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" ) {
+             result = true;
+         }
+         else{
+             result = false;
+         }
+     }
 
 
 
@@ -29,18 +45,44 @@
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
 
-
+/*
+   function rovarspraket(word)
+     {
+      word = "rövarspråket";
+     }
+*/
 
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
 
+/*
+  funcArray = new Array();
+  funcArray = someArray;
 
+    function sum(myArr)
+    {
+        var sum = array.reduce(function(a, b){
+         return a + b;}, 0);
+        console.log(sum);
+    }
+
+    function multiply(myArr)
+        for (var i=0; i< arr1.length; i++){
+        return arr1[i]*arr2[i];
+    }
+
+*/
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
 
+
+    function reverse(bob)
+    {
+    var reversedWords = reverseString(bob);
+    }
 
 
   // ---------------------
