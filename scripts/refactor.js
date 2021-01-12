@@ -33,6 +33,10 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
 
+// I put the function name within the varaiable?
+
+var foo = (function doSomethingCool() {console.log("Something Cool")})();
+
 
 // -----------------------------------------------
 
@@ -53,6 +57,11 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
+// the function is not named.  It calls all the steps within.
+
+(function() {
+   alert("Hello, World!")
+})();
 
 // -----------------------------------------------
 
@@ -94,6 +103,9 @@ console.log("The letter is", letter);
 // The function below reverses a string. The body
 // of the function is 5 lines of code. Refactor
 // this function to do the same thing with 1 line
+
+
+
 
 var reverseStr = function(str) {
   var arr;
