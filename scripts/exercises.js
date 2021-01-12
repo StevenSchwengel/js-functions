@@ -13,6 +13,8 @@
      }
     }
 
+
+
   // ---------------------
   // Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.
   // ---------------------
@@ -49,6 +51,7 @@
    function rovarspraket(word)
      {
       word = "rövarspråket";
+
      }
 */
 
@@ -89,17 +92,77 @@
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
   // ---------------------
 
+    function findLongestWord(text)
+      {
+      // Step 1. Split the string into an array of strings
+      var strSplit = str.split(text);
 
+      // Step 2. Initiate a variable that will hold the length of the longest word
+      var longestWord = 0;
+
+      // Step 3. Created the FOR loop
+       for(var i = 0; i < strSplit.length; i++){
+         if(strSplit[i].length > longestWord){ // If strSplit[i].length is greater than the word it is compared with...
+     	longestWord = strSplit[i].length; // ...then longestWord takes this new value
+          }
+       }
+     }
 
   // ---------------------
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
+/*
+    var longestWords = 0;
 
+    function filterLongWords(text, wordLenPreference) {
+
+    // Step 1. Split the string into an array of strings
+    var strSplit = str.split(text);
+
+    // Step 2. Find long words of interest.
+    for(var i = 0; strgSplit[i].length > wordLenPreference; i++)
+      {
+      var ArrayOfWords[(longestWords ++ 1)] = strgSplit[i];
+      }
+*/
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
   // ---------------------
+
+  charFreq(text)
+     {
+
+   // Step 1 sort letters into alphabetical order.
+
+    var sortAlphabets = function(text) {
+      return text.split('').sort().join('');
+      };
+
+  //  Step 2 split string into an array and count letters in string 
+
+    var arrayedString = sortAlphabets.split;
+    var arraysStringLength = arrayedString.length;
+
+
+  //  Step 3 run loop to compare initial letter and last letter being examined
+
+    var lastletter = arraysString[0];
+    let countletter = 0;
+
+    for (i = 1; i ++ <= arraysStringLength) {
+       if (lastletter == arryString[i]) // this checks for current letter match
+       {
+         var countletter ++;
+       }
+        else {
+          console.log(arrayString[i]);
+          console.log(countletter);
+        }
+      }
+
+    }
 
 
   ////////////////////////////////////////////////////////////////////////
