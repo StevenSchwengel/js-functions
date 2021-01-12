@@ -23,6 +23,7 @@
    function maxOfThree(a, b, c)
      {
      var max = Math.max(a, b, c);
+     return max;
      }
 
 
@@ -35,9 +36,11 @@
      {
          if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u" ) {
              result = true;
+             return true;
          }
          else{
              result = false;
+             return false;
          }
      }
 
@@ -47,35 +50,69 @@
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
 
-/*
+
+
    function rovarspraket(word)
      {
-      word = "rövarspråket";
-
+    //  word = "rövarspråket";
+      var strSplit = str.split(text);
      }
-*/
+
+
+     function vowel_check(str1)
+     {
+       var vowel_list = 'aeiouAEIOU';
+       var vcount = 0;
+
+       for(var x = 0; x < str1.length ; x++)
+       {
+         if (vowel_list.indexOf(str1[x]) !== -1)
+         {
+           vcount += 1;
+         }
+
+       }
+       return vcount;
+     }
+
+// conceptuual logic to work to insert extra spaces
+
+     for (i = 1; i <= strsplit.Length; i++) {
+        if ("o" <> strSplit[i]) // this checks for current letter match
+        {
+          var countletter ++;
+        }
+         else {
+           console.log(arrayString[i]);
+           console.log(countletter);
+         }
+      }
+
+
+
+
 
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
 
-/*
-  funcArray = new Array();
-  funcArray = someArray;
 
     function sum(myArr)
     {
-        var sum = array.reduce(function(a, b){
-         return a + b;}, 0);
-        console.log(sum);
-    }
+        let total = 0;
+        for(var i in a){
+          total += a[i];
+        return total;
+        }
 
-    function multiply(myArr)
-        for (var i=0; i< arr1.length; i++){
-        return arr1[i]*arr2[i];
-    }
 
-*/
+
+    function multiply(myArr) {
+        for (var i=0; i < arr1.length; i++){
+        myArr[i] = myArr[i]*myArr[i - 1];
+         }
+       return myArr[i];
+     }
 
   // ---------------------
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
@@ -85,6 +122,7 @@
     function reverse(bob)
     {
     var reversedWords = reverseString(bob);
+    return reversedWords;
     }
 
 
@@ -112,20 +150,23 @@
   // Define a function filterLongWords() that takes an array of words and an integer i and returns the array of words that are longer than i.
   // ---------------------
 
-/*
-    var longestWords = 0;
+
 
     function filterLongWords(text, wordLenPreference) {
+
+    var longestWords = 0;
 
     // Step 1. Split the string into an array of strings
     var strSplit = str.split(text);
 
     // Step 2. Find long words of interest.
-    for(var i = 0; strgSplit[i].length > wordLenPreference; i++)
+    for (var i = 0; strgSplit[i].length > wordLenPreference; i++)
       {
-      var ArrayOfWords[(longestWords ++ 1)] = strgSplit[i];
+      var arrayOfWords[(longestWords + 1)] = strgSplit[i];
       }
-*/
+    }
+
+
 
   // ---------------------
   // Define a function charFreq() that takes a string and builds a frequency listing of the characters contained in it. Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
@@ -140,7 +181,7 @@
       return text.split('').sort().join('');
       };
 
-  //  Step 2 split string into an array and count letters in string 
+  //  Step 2 split string into an array and count letters in string
 
     var arrayedString = sortAlphabets.split;
     var arraysStringLength = arrayedString.length;
@@ -148,13 +189,13 @@
 
   //  Step 3 run loop to compare initial letter and last letter being examined
 
-    var lastletter = arraysString[0];
-    let countletter = 0;
+    var lastLetter = arraysString[0];
+    let countLetter = 0;
 
-    for (i = 1; i ++ <= arraysStringLength) {
-       if (lastletter == arryString[i]) // this checks for current letter match
+    for (i = 1; i <= arraysStringLength; i++){
+       if (lastLetter == arryString[i]) // this checks for current letter match
        {
-         var countletter ++;
+         countLetter++;
        }
         else {
           console.log(arrayString[i]);
@@ -191,7 +232,7 @@
 
   console.assert(findLongestWord(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is']) === 6, 'ERROR function findLongestWord');
 
-  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'function findLongestWords');
+  console.assert(filterLongWords(['hello', 'world', 'does','anyone', 'really', 'know', 'what', 'time', 'it', 'is'], 4).length === 4, 'ERROR function filterLongWords');
 
   console.assert(charFreq('abbabcbdbabdbdbabababcbcbab').a === 7);
 
