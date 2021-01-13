@@ -57,7 +57,7 @@ setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
 
-// the function is not named.  It calls all the steps within.
+// the function name is dropped and is self referenced.  It calls all the steps within.
 
 (function() {
    alert("Hello, World!")
@@ -93,6 +93,12 @@ console.log("The letter is", letter);
 // Put your answer below -------------------------
 
 
+ The order matches with choice [a]
+   the initial value of var letter set to x
+ The setTime is run once (assumed)
+   the second run puts letter var as y
+   the third change then goes to letter as to z.
+
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -117,7 +123,10 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
-
+   //  This is just a guess.  I'm not sure if this would work.
+   // source
+   // https://medium.com/@santhoshsundar/writing-single-line-statements-in-javascript-reverse-a-string-7c1727043eb8
+  str = str.reverse
 
 // -----------------------------------------------
 
@@ -153,6 +162,32 @@ var spanishColor = function(colorName) {
 // Put your answer below -------------------------
 
 
+  //  The following is based on a code snippet I found at...
+  // https://ultimatecourses.com/blog/deprecating-the-switch-statement-for-object-literals
+
+
+
+  function spanishColor (colorName) {
+    var color;
+    var color = {
+     'rojo' : function() {
+     color =  "#ff0000";
+    },
+     'blanco' : function() {
+      color == '#ffffff';
+    },
+      'azul' : function() {
+       color == "#0000ff";
+     },
+       'verde' : function () {
+        color == "#00ff00";
+     }
+        'negro' : function () {
+        color == "#000000";
+    }
+  };
+
+
 
 // -----------------------------------------------
 
@@ -170,6 +205,11 @@ var foo = "bar";
 
 // Put your answer below -------------------------
 
+// 1st line declares foo null in value
+// 2nd line sets fthe value of foo to "bar"
+
+var foo = null;
+    foo = "bar";
 
 // -----------------------------------------------
 
@@ -193,6 +233,16 @@ var callTenTimes = function(callback) {
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
+
+// 'a' represents the number of times to specify function to run.
+// I'm a bit confused if that is the number of time to run the functionName/
+// buried within "function(callback)...  I'm a bit confused."
+
+
+function callNTimes(a)
+  for (i = 0; i <= a; i+++){
+    function(callback)
+     }
 
 
 // -----------------------------------------------
