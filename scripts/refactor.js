@@ -37,6 +37,9 @@ function doSomethingCool() {
 
 var foo = (function doSomethingCool() {console.log("Something Cool")})();
 
+// class answer:
+const doSomethingCool = function(){ console.log("Something Cool");}
+
 
 // -----------------------------------------------
 
@@ -62,6 +65,13 @@ setTimeout(sayHi, 2000);
 (function() {
    alert("Hello, World!")
 })();
+
+// class answers
+// this is in miliseconds for
+setTimeout(function() {alert"(Hello, World!")}, 2000);
+// OR
+// using arrow method
+setTimeout(() => alert"(Hello, World!"), 2000);
 
 // -----------------------------------------------
 
@@ -90,6 +100,7 @@ setTimeout(function(){
 letter = "z";
 console.log("The letter is", letter);
 
+
 // Put your answer below -------------------------
 
 
@@ -98,6 +109,13 @@ console.log("The letter is", letter);
  The setTime is run once (assumed)
    the second run puts letter var as y
    the third change then goes to letter as to z.
+
+
+// class answers
+//  answer is [c]
+
+
+
 
 // -----------------------------------------------
 
@@ -126,7 +144,15 @@ var reverseStr = function(str) {
    //  This is just a guess.  I'm not sure if this would work.
    // source
    // https://medium.com/@santhoshsundar/writing-single-line-statements-in-javascript-reverse-a-string-7c1727043eb8
-  str = str.reverse
+  str = str.reverse;
+
+
+  // class answers
+  const revserseStr = str => str.split('').reverse().join('');
+
+  // cain chain strings together (as long as the methods fit for example math on string strings would not work )
+
+
 
 // -----------------------------------------------
 
@@ -169,7 +195,7 @@ var spanishColor = function(colorName) {
 
   function spanishColor (colorName) {
     var color;
-    var color = {
+    const color = {
      'rojo' : function() {
      color =  "#ff0000";
     },
@@ -187,6 +213,21 @@ var spanishColor = function(colorName) {
     }
   };
 
+// class answers
+
+const color = {
+'rojo' : "#ff0000",
+'blanco' : '#ffffff',
+ 'azul'  "#0000ff",
+  'verde' : "#00ff00",
+   'negro' : "#000000",
+}
+
+const spanishColor = function(colorName) {
+  return colors[colorName];
+}
+
+const spanishColor  =  colorName => colors[colorName];
 
 
 // -----------------------------------------------
@@ -208,7 +249,9 @@ var foo = "bar";
 // 1st line declares foo null in value
 // 2nd line sets fthe value of foo to "bar"
 
-var foo = null;
+// class answer matches
+
+var foo;
     foo = "bar";
 
 // -----------------------------------------------
@@ -230,6 +273,7 @@ var callTenTimes = function(callback) {
   range.forEach(callback);
 };
 
+
 // callTenTime(functionName);
 
 // Put your answer below -------------------------
@@ -243,7 +287,12 @@ function callNTimes(a)
   for (i = 0; i <= a; i+++){
     function(callback)
      }
+// class ansnwer
 
+function callNTimes(callback, i) {}
+   var range = Array.from(array(num).keys());
+    range.forEach(callback);
+     }
 
 // -----------------------------------------------
 
@@ -272,7 +321,24 @@ var decreaseScore = function() {
 
 // Put your answer below -------------------------
 
+//  FIX FIX
+// I'm not sure.  Will need help with this one!
+//
 
+// class answer
+
+(function() {
+'use strict';
+
+var score = 0;
+
+var increaseScore = function() {
+  score++;
+};
+
+var decreaseScore = function() {
+  score--;
+})();
 
 // -----------------------------------------------
 
@@ -292,6 +358,15 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+//
+
+//change line to keep sum...
+// Console.log does not hold ahy value.
+
+//  class answer matches my answer.
+
+numberA = numberA + numberB
+return numberA;
 
 
 
@@ -320,6 +395,28 @@ var accelerate = function(amount) {
 
 // Put your answer below -------------------------
 
+//
+// putting in basic amounts to avoid unreasonable numbers...
+// I remember hearing about this in class, but not sure how to fix it..
+//
+//
+
+//  the way the code reads is 0 = 0 + amount.
+//  It is written in a way that assumes zero speed.
+
+
+var accelerate = function(amount = 1) {
+  speed += amount;
+}
+
+// class answer
+// may answer above did work.  :) 
+
+var speed = 0;
+
+var accelerate = function(amount = 1) {
+  speed += amount || 1;
+}
 
 
 // -----------------------------------------------
