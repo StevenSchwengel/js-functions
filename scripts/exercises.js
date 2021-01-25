@@ -52,40 +52,76 @@
     // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
     // ---------------------
 
+   // var tarray = [];
+   //
+   // console.log ('hi');
+   //
+   //  function rovarspraket(text) {
+   //     tarray.from.text;
+   //
+   //    console.log(tarray);
+   //
+   //  }
 
+      function rovarspraket(str) {
+        // double the consonants and place an o between them
+        const consonants = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'];
 
-    function rovarspraket(word) {
-      //  word = "rövarspråket";
-      var strSplit = str.split(text);
-    }
+        let rovarspraketString = '';
 
-
-    function vowel_check(str1) {
-      var vowel_list = 'aeiouAEIOU';
-      var vcount = 0;
-
-      for (var x = 0; x < str1.length; x++) {
-        if (vowel_list.indexOf(str1[x]) !== -1) {
-          vcount += 1;
+        for(let i = 0; i < str.length; i++) {
+          if(consonants.includes(str[i])) {
+            rovarspraketString = rovarspraketString + str[i] + 'o' + str[i];
+          } else {
+            rovarspraketString = rovarspraketString + str[i];
+          }
         }
 
+        return rovarspraketString;
+
       }
-      return vcount;
-    }
 
+    // my Initial answer...
+    //   //  word = "rövarspråket";
+    //   var strSplit = str.split(text);
+    // }
+    //
+    //
+    // function vowel_check(str1) {
+    //   var vowel_list = 'aeiouAEIOU';
+    //   var vcount = 0;
+    //
+    //   for (var x = 0; x < str1.length; x++) {
+    //     if (vowel_list.indexOf(str1[x]) !== -1) {
+    //       vcount += 1;
+    //     }
+    //
+    //   }
+    //   return vcount;
+    // }
 
+   // function rovarspraket(text)
+   // {
+   //   let newText = '';
+   //   let lowerCaseString = text.toLowerCase();
+   //   console.log(lowerCaseString);
+   // }
+   //
+   // rovarspraket();
+
+    //
     // class answer //
-    function rovarspraket(text) {
-      let translation = '';
-
-      let toLowerCaseString = text.toLowerCase();
-      let textArray = toLowerCaseString.split('');
-
-      for (let i = 0; i < textArray.length; i++) {
-        'bcdfghklmnpqrstvxyz'.includes(textArray[1]) ?
-          translation += `${textArray[i]}o${textArray[i]}` :
-          translation += textArray[i];
-      }
+    // function rovarspraket(text) {
+    //   let translation = '';
+    //
+    //   let toLowerCaseString = text.toLowerCase();
+    //   let textArray = toLowerCaseString.split('');
+    //
+    //   for (let i = 0; i < textArray.length; i++) {
+    //     'bcdfghklmnpqrstvxyz'.includes(textArray[1]) ?
+    //       translation += `${textArray[i]}o${textArray[i]}` :
+    //       translation += textArray[i];
+    //   }
 
 
 
@@ -100,8 +136,8 @@
       //   }
       // }
 
-
-}
+//
+// }
 
 
       // ---------------------
@@ -116,22 +152,24 @@
         for (let i = 0; i < myArr.length; i++) {
           total += myArr[i];
         }
+        return total;
       }
 
       function multiply(myArr) {
-        for (var i = 0; i < arr1.length; i++) {
-          myArr[i] = myArr[i] * myArr[i - 1];
+        let product = 1;
+        for (var i = 0; i < myArr.length; i++) {
+          product = product * myArr[i];
         }
-        return myArr[i];
+        return product;
       }
 
       // class answers....
-      function multiply(arr) {
-        let result = 1;
-        for (let i = 0; i < arr.length; i++) {
-          result *= arr[i];
-        }
-      }
+      // function multiply(arr) {
+      //   let result = 1;
+      //   for (let i = 0; i < arr.length; i++) {
+      //     result *= arr[i];
+      //   }
+      // }
 
       // const sum3 = arr.reduce(function(acc, i) {
       //   return acc + i;
