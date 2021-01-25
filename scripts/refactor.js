@@ -104,11 +104,11 @@ console.log("The letter is", letter);
 // Put your answer below -------------------------
 
 
- The order matches with choice [a]
-   the initial value of var letter set to x
- The setTime is run once (assumed)
-   the second run puts letter var as y
-   the third change then goes to letter as to z.
+ // The order matches with choice [a]
+ //   the initial value of var letter set to x
+ // The setTime is run once (assumed)
+ //   the second run puts letter var as y
+ //   the third change then goes to letter as to z.
 
 
 // class answers
@@ -215,19 +215,19 @@ var spanishColor = function(colorName) {
 
 // class answers
 
-const color = {
-'rojo' : "#ff0000",
-'blanco' : '#ffffff',
- 'azul'  "#0000ff",
+const colors = {
+  'rojo' : "#ff0000",
+  'blanco' : '#ffffff',
+  'azul'  "#0000ff",
   'verde' : "#00ff00",
-   'negro' : "#000000",
+  'negro' : "#000000",
 }
 
 const spanishColor = function(colorName) {
   return colors[colorName];
 }
 
-const spanishColor  =  colorName => colors[colorName];
+const spanishColor = colorName => colors[colorName];
 
 
 // -----------------------------------------------
@@ -252,7 +252,7 @@ var foo = "bar";
 // class answer matches
 
 var foo;
-    foo = "bar";
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -283,16 +283,18 @@ var callTenTimes = function(callback) {
 // buried within "function(callback)...  I'm a bit confused."
 
 
-function callNTimes(a)
-  for (i = 0; i <= a; i+++){
-    function(callback)
-     }
+// function callNTimes(a){
+//   for (i = 0; i <= a; i+++){
+//     // function(callback)
+//    }
+// }
+
 // class ansnwer
 
 function callNTimes(callback, i) {}
-   var range = Array.from(array(num).keys());
-    range.forEach(callback);
-     }
+   var range = Array.from(Array(i).keys());
+   range.forEach(callback);
+ }
 
 // -----------------------------------------------
 
@@ -365,8 +367,9 @@ var twoPlusTwo = addNumbers(2,2);
 
 //  class answer matches my answer.
 
-numberA = numberA + numberB
-return numberA;
+var addNumbers = function(numberA, numberB) {
+  return numberA + numberB;
+};
 
 
 
@@ -410,12 +413,12 @@ var accelerate = function(amount = 1) {
 }
 
 // class answer
-// may answer above did work.  :) 
+// may answer above did work.  :)
 
 var speed = 0;
 
 var accelerate = function(amount = 1) {
-  speed += amount || 1;
+  speed += amount;
 }
 
 
